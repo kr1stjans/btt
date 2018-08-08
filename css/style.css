@@ -9674,7 +9674,7 @@ pre code {
         order: 4;
     }
 
-    .order-md-5 {
+    .order- {
         order: 5;
     }
 
@@ -11011,44 +11011,16 @@ fieldset:disabled a.btn {
     border-color: #645aff;
 }
 
-.btn-success:hover {
-    color: #fff;
-    background-color: #00a855;
-    border-color: #009b4e;
-}
-
-.btn-success:focus, .btn-success.focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 206, 104, 0.5);
-}
-
-.btn-success.disabled, .btn-success:disabled {
-    color: #fff;
-    background-color: #00ce68;
-    border-color: #00ce68;
-}
-
-.btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
-.show > .btn-success.dropdown-toggle {
-    color: #fff;
-    background-color: #009b4e;
-    border-color: #008e48;
-}
-
-.btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
-.show > .btn-success.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 206, 104, 0.5);
-}
-
 .btn-info {
     color: #fff;
-    background-color: #8862e0;
-    border-color: #8862e0;
+    background-color: #645aff;
+    border-color: #645aff;
 }
 
 .btn-info:hover {
     color: #fff;
-    background-color: #7042da;
-    border-color: #6837d8;
+    background-color: #645aff;
+    border-color: #645aff;
 }
 
 .btn-info:focus, .btn-info.focus {
@@ -11057,8 +11029,8 @@ fieldset:disabled a.btn {
 
 .btn-info.disabled, .btn-info:disabled {
     color: #fff;
-    background-color: #8862e0;
-    border-color: #8862e0;
+    background-color: #645aff;
+    border-color: #645aff;
 }
 
 .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active,
@@ -11243,7 +11215,7 @@ fieldset:disabled a.btn {
     box-shadow: 0 0 0 0.2rem rgba(48, 142, 224, 0.5);
 }
 
-.btn-outline-secondary {
+. {
     color: #e5e5e5;
     background-color: transparent;
     background-image: none;
@@ -18826,7 +18798,7 @@ html {
 .content-wrapper {
     display: flex;
     justify-content: center;
-    background: #f2f8f9;
+    background: #f4f4f4;
     padding: 1.5rem 1.7rem;
     width: 100%;
     -webkit-flex-grow: 1;
@@ -20471,8 +20443,10 @@ pre {
 
 /* Cards */
 .card {
-    border: 0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
     border-radius: 2px;
+    padding: 10px;
+    border: 1px solid #b9b9b9;
 }
 
 .card .card-body {
@@ -21762,4 +21736,92 @@ ul li {
     }
 }
 
-/*# sourceMappingURL=maps/style.css.map */
+.cta {
+    width: 500px !important;
+    display: flex;
+    height: 50pX;
+}
+
+.cta > a {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta.btn {
+    width: inherit !important
+}
+
+.fa-linkedin {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta > .button {
+    padding: 0;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.form-output {
+    font-weight: 600;
+}
+
+.add-experience {
+    display: none;
+}
+
+.btn-success {
+    color: white !important;
+}
+
+.cards .card-title {
+    display: flex;
+    justify-content: space-between;
+    color: #e65251;
+}
+
+.card .card-body {
+    padding: 5px;
+}
+
+.cards .card-description {
+
+}
+
+.card-title .tags {
+    font-weight: normal;
+    color: #212529;
+
+}
+
+.card-subtitle span {
+}
+
+.card-subtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+
+.job-cards .card-title {
+    color: #212529;
+}
+
+.job-cards .card-title > b {
+    text-decoration: underline;
+
+}

@@ -18,7 +18,7 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png"/>
 
-    <link href="btt_files_old/bootstrap-social.css" rel="stylesheet">
+    <link href="deprecated/btt_files_old/bootstrap-social.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
@@ -29,11 +29,11 @@
         <div class="navbar-menu-wrapper d-flex align-items-center" style="width: 100%;">
             <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8000/Blockchain%20Think%20Tank%20Slovenia.htm">Home
+                    <a class="nav-link" href="/">Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="http://localhost:8000/marketplace.html" class="nav-link">
+                    <a href="marketplace.html" class="nav-link">
                         <i class="mdi mdi-elevation-rise"></i>Marketplace</a>
                 </li>
             </ul>
@@ -41,14 +41,14 @@
                 <li class="nav-item dropdown d-none d-xl-inline-block">
                     <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown"
                        aria-expanded="false">
-                        <span class="profile-text">Hello, Kristjan!</span>
+                        <span class="profile-text">Hello, Janez!</span>
                         <img class="img-xs rounded-circle" src="images/faces/face1.jpg" alt="Profile image">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                         <a class="dropdown-item mt-2">
                             Profile
                         </a>
-                        <a class="dropdown-item">
+                        <a class="dropdown-item" href="/">
                             Sign Out
                         </a>
                     </div>
@@ -65,94 +65,120 @@
         <!-- partial -->
         <div class="main-panel" style="width: 100%;">
             <div class="content-wrapper">
-                <div class="col-md-6 grid-margin stretch-card">
+                <div class="col-md-6 grid-margin">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Your profile</h4>
+                            <h4 class="card-title"></h4>
                             <p class="card-description">
-                                Please fill in your information.
                             </p>
                             <form class="forms-sample">
                                 <div class="form-group">
-                                    <label>Profile image</label>
-                                    <input type="file" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <input type="text" class="form-control file-upload-info" disabled
-                                               placeholder="Upload Image">
-                                        <span class="input-group-append">
-                          <button class="file-upload-browse btn btn-info" type="button">Upload</button>
-                        </span>
-                                    </div>
+                                    <label for="name">Name</label>
+                                    <div class="form-output">Janez Novak</div>
+                                    <input type="text" class="form-control hidden" id="name" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <div class="form-output">/</div>
+                                    <textarea class="form-control hidden" id="description" rows="4"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="experience1">Experience1</label>
+                                    <div class="form-output">/</div>
+                                    <textarea rows="4" class="form-control hidden" id="experience1"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="experience1">Experience2</label>
+                                    <div class="form-output">/</div>
+                                    <textarea rows="4" class="form-control hidden" id="experience2"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button id="addExperienceButton" class="btn btn-light hidden">Add experience
+                                    </button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="experience1">Your Twitter feed</label>
+                                    <div class="form-output">/</div>
+                                    <input type="text" class="form-control hidden" id="twitter">
+                                </div>
+                                <div class="form-group">
+                                    <label for="medium">Your Medium feed</label>
+                                    <div class="form-output">/</div>
+                                    <input type="text" class="form-control hidden" id="medium">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputName1">Name</label>
-                                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                                    <div id="editButton" class="btn btn-success mr-2" onclick="reverseInputs()">Edit
+                                    </div>
+                                    <div id="saveButton" class="btn btn-success mr-2 hidden" onclick="changeOutputs();">
+                                        Save
+                                    </div>
+                                    <div id="cancelButton" class="btn btn-light hidden" onclick="toggleElements()">
+                                        Cancel
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleTextarea1">Description</label>
-                                    <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputCity1">Experience1</label>
-                                    <input type="text" class="form-control" id="exampleInputCity1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputCity1">Experience2</label>
-                                    <input type="text" class="form-control" id="exampleInputCity2">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputCity1">Experience3</label>
-                                    <input type="text" class="form-control" id="exampleInputCity3">
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-light">Add experience</button>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputCity1">Your Twitter feed</label>
-                                    <input type="text" class="form-control" id="twitter">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputCity1">Your Medium feed</label>
-                                    <input type="text" class="form-control" id="medium">
-                                </div>
-                                <button type="submit" class="btn btn-success mr-2">Submit</button>
-                                <button class="btn btn-light">Cancel</button>
                             </form>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <!-- content-wrapper ends -->
-            <!-- partial:partials/_footer.html -->
             <footer class="footer">
                 <div class="container-fluid clearfix">
             <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
               <a href="/" target="_blank">Kristjan & Aljaž</a>. All rights reserved.</span>
                 </div>
             </footer>
-            <!-- partial -->
         </div>
-        <!-- main-panel ends -->
     </div>
-    <!-- page-body-wrapper ends -->
 </div>
-<!-- container-scroller -->
 
-<!-- plugins:js -->
 <script src="vendors/js/vendor.bundle.base.js"></script>
-<script src="vendors/js/vendor.bundle.addons.js"></script>
-<!-- endinject -->
-<!-- Plugin js for this page-->
-<!-- End plugin js for this page-->
-<!-- inject:js -->
-<script src="js/off-canvas.js"></script>
-<script src="js/misc.js"></script>
-<!-- endinject -->
-<!-- Custom js for this page-->
-<script src="js/dashboard.js"></script>
-<!-- End custom js for this page-->
+<script>
+    function toggleElements() {
+        toggleDisplay($('.form-output'));
+        toggleDisplay($('.form-control'));
+        toggleDisplay($('#saveButton'));
+        toggleDisplay($('#cancelButton'));
+        toggleDisplay($('#editButton'));
+    }
+
+    function reverseInputs() {
+        $('.form-output').each(function (idx, el) {
+            let jqueryEl = $(el);
+            let closest = jqueryEl.siblings('.form-control').first();
+            let newValue = jqueryEl[0].innerText;
+            if (newValue && newValue !== '/') {
+                closest.val(newValue);
+            }
+        });
+        toggleElements();
+
+    }
+
+    function changeOutputs() {
+        $('.form-control').each(function (idx, el) {
+            let jqueryEl = $(el);
+            let closest = jqueryEl.siblings('.form-output')[0];
+            let newValue = jqueryEl.val();
+            if (newValue) {
+                closest.innerText = newValue;
+            }
+        });
+
+        toggleElements();
+    }
+
+    function toggleDisplay(el) {
+        if (el.hasClass('hidden')) {
+            el.removeClass('hidden');
+        } else {
+            el.addClass('hidden');
+        }
+    }
+
+
+</script>
 </body>
 
 </html>
